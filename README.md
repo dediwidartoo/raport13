@@ -1,4 +1,4 @@
-# Aplikasi Raport Kurikulum 2013 SMK Terpadu Hadziqiyyah Nalumsari
+# Raport SMK Terpadu Hadziqiyyah Nalumsari
 
 ## Team :
 * Dedi Widarto
