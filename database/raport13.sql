@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 20, 2017 at 03:28 AM
+-- Generation Time: Aug 24, 2017 at 02:39 PM
 -- Server version: 10.1.25-MariaDB
 -- PHP Version: 5.6.31
 
@@ -58,7 +58,7 @@ INSERT INTO `tabel_menu` (`id_menu`, `nama_menu`, `link`, `icon`, `is_main_menu`
 CREATE TABLE `tbl_siswa` (
   `id_siswa` int(11) NOT NULL,
   `nis` varchar(15) NOT NULL,
-  `nama` varchar(100) NOT NULL,
+  `nama_siswa` varchar(100) NOT NULL,
   `temp_lahir` varchar(15) NOT NULL,
   `tgl_lahir` date NOT NULL,
   `j_kelamin` enum('L','P') NOT NULL,
@@ -73,12 +73,12 @@ CREATE TABLE `tbl_siswa` (
   `nama_ayah` varchar(100) NOT NULL,
   `nama_ibu` varchar(100) NOT NULL,
   `alamat_orangtua` text NOT NULL,
-  `pekerjaan_ayah` varchar(12) NOT NULL,
-  `pekerjaan_ibu` varchar(12) NOT NULL,
+  `pekerjaan_ayah` varchar(50) NOT NULL,
+  `pekerjaan_ibu` varchar(50) NOT NULL,
   `nama_wali` varchar(100) NOT NULL,
   `alamat_wali` text NOT NULL,
   `telp_wali` varchar(15) NOT NULL,
-  `pekerjaan_wali` varchar(12) NOT NULL,
+  `pekerjaan_wali` varchar(50) NOT NULL,
   `foto` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -86,8 +86,9 @@ CREATE TABLE `tbl_siswa` (
 -- Dumping data for table `tbl_siswa`
 --
 
-INSERT INTO `tbl_siswa` (`id_siswa`, `nis`, `nama`, `temp_lahir`, `tgl_lahir`, `j_kelamin`, `agama`, `status_keluarga`, `anak_ke`, `alamat`, `telp`, `asal_sekolah`, `kelas_diterima`, `tgl_diterima`, `nama_ayah`, `nama_ibu`, `alamat_orangtua`, `pekerjaan_ayah`, `pekerjaan_ibu`, `nama_wali`, `alamat_wali`, `telp_wali`, `pekerjaan_wali`, `foto`) VALUES
-(1, '141240000238', 'Dedi Widarto', 'Jepara', '1996-01-23', 'L', 'Islam', 'Kandung', 3, 'Sidigede', '089690427439', 'SD Sidigede', '1', '2017-08-07', 'bapak', 'ibuk', 'sidigede', 'tani', 'tani', 'waliku', 'sidigede', '089690427439', 'tani', 'foto.jpg');
+INSERT INTO `tbl_siswa` (`id_siswa`, `nis`, `nama_siswa`, `temp_lahir`, `tgl_lahir`, `j_kelamin`, `agama`, `status_keluarga`, `anak_ke`, `alamat`, `telp`, `asal_sekolah`, `kelas_diterima`, `tgl_diterima`, `nama_ayah`, `nama_ibu`, `alamat_orangtua`, `pekerjaan_ayah`, `pekerjaan_ibu`, `nama_wali`, `alamat_wali`, `telp_wali`, `pekerjaan_wali`, `foto`) VALUES
+(1, '141240000238', 'Dedi Widarto', 'Jepara', '1996-01-23', 'L', 'Islam', 'Kandung', 3, 'Sidigede', '089690427439', 'SD Sidigede', '1', '2017-08-07', 'bapak', 'ibuk', 'sidigede', 'tani', 'tani', 'waliku', 'sidigede', '089690427439', 'tani', 'foto.jpg'),
+(2, '141240000265', 'Muhammad Auliya Rochman', 'Jepara', '1995-08-17', 'L', 'Islam', 'Kandung', 2, 'Rajekwesi, Mayong, Jepara', '089690123456', 'SMP Terpadu Hadziqiyyah', '1', '2017-01-01', 'bapake auliya', 'ibuke auliya', 'rajekwesi', 'programmer', 'analyst', 'nama wali', 'rajekwesi', '089690432561', 'mebelan', '');
 
 --
 -- Indexes for dumped tables
@@ -118,7 +119,7 @@ ALTER TABLE `tabel_menu`
 -- AUTO_INCREMENT for table `tbl_siswa`
 --
 ALTER TABLE `tbl_siswa`
-  MODIFY `id_siswa` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;COMMIT;
+  MODIFY `id_siswa` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
