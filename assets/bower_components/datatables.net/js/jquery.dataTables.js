@@ -4034,7 +4034,7 @@
 			order:   [],
 			start:   displayStart,
 			length:  displayLength,
-			search:  {
+			search :  {
 				value: preSearch.sSearch,
 				regex: preSearch.bRegex
 			}
@@ -14248,7 +14248,7 @@
 			 *      return d.replace(/\n/g," ").replace( /<.*?>/g, "" );
 			 *    }
 			 */
-			search: {},
+			search : {},
 	
 	
 			/**

@@ -12,9 +12,9 @@ class Siswa extends CI_Controller
 
 	function data()
 	{
-		$table = 'tbl_siswa';
+		$table 		= 'tbl_siswa';
         $primaryKey = 'id_siswa';
-        $columns = array(
+        $columns 	= array(
         	array('db' => 'id_siswa', 'dt' => 'id_siswa'),
         	array(
                 'db' => 'foto',
@@ -86,6 +86,11 @@ class Siswa extends CI_Controller
 
 	function add()
 	{
-		$this->template->load('template', 'siswa/add_v');
+		if (isset($_POST['submit'])) {
+			$this->Mdl_siswa->save();
+			redirect('siswa','refresh');
+		} else {
+			$this->template->load('template', 'siswa/add_v');
+		}
 	}
 }
