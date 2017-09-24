@@ -56,7 +56,7 @@ class Siswa extends CI_Controller
                 'db' => 'id_siswa',
                 'dt' => 'detail',
                 'formatter' => function($id) {
-                    return "<a href='siswa/detail/$id'>Detail</a>";
+                    return anchor('siswa/detail/'.$id, 'Detail');
                 }
             )
         );
