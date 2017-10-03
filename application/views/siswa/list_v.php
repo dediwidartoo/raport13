@@ -37,7 +37,7 @@
               <th>TEMPAT LAHIR</th>
               <th>TANGGAL LAHIR</th>
               <th>AKSI</th>
-              <th>detail</th>
+              
               
             </tr>
         </thead>
@@ -78,7 +78,6 @@
                 { "data" : "temp_lahir" },
                 { "data" : "tgl_lahir" },
                 { "data" : "aksi" },
-                { "data" : "detail" },
             ]
         } );
             
@@ -89,3 +88,5 @@
         } ).draw();
     } );
 </script>
+<!-- Custom Konfirmasi -->
+<script src="<?php echo base_url(); ?>assets/bower_components/konfirmasi/js/konfirmasi_hapus.js"></script>
