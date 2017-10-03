@@ -21,6 +21,7 @@
       <h3 class="box-title">Daftar Siswa</h3>
 
       <div class="box-tools pull-right">
+        <?php echo anchor('siswa/add', '<i class="fa fa-plus-square"></i>', 'class="btn btn-box-tool" data-toggle="tooltip" title="Tambah Data"'); ?>
         <button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip"
                 title="Collapse">
           <i class="fa fa-minus"></i></button>

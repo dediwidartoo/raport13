@@ -23,7 +23,7 @@
   <!-- Default box -->
   <div class="box">
     <div class="box-header with-border">
-      <h3 class="box-title">Tambah Siswa</h3>
+      <h3 class="box-title">Edit Siswa</h3>
 
       <div class="box-tools pull-right">
         <button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip"
@@ -50,7 +50,7 @@
         $temp_lahir     = $v0->temp_lahir;
         $tgl_lahir      = $v0->tgl_lahir;
         $j_kelamin      = $v0->j_kelamin;
-        $agama          = $v0->agama;
+        $agama          = $v0->kd_agama;
         $status_keluarga= $v0->status_keluarga;
         $anak_ke        = $v0->anak_ke;
         $alamat         = $v0->alamat;
@@ -108,11 +108,19 @@
               </label>
             </div>
           </div>
-          <div class="form-group">
+          <!-- <div class="form-group">
             <label for="inputPassword3" class="col-sm-3 control-label">Agama</label>
             <div class="col-sm-9">
             <?php 
             echo form_dropdown('agama', array('islam' =>'ISLAM', 'kristen' =>'KRISTEN', 'budha' =>'BUDHA', 'hindu' =>'HINDU', 'katolik' =>'KATOLIK'), $agama, "class='form-control'");
+            ?>
+            </div>
+          </div> -->
+          <div class="form-group">
+            <label for="inputPassword3" class="col-sm-3 control-label">Agama</label>
+            <div class="col-sm-9">
+            <?php 
+            echo cmb_dinamis('agama', 'tbl_agama', 'nama_agama', 'kd_agama', $agama);
             ?>
             </div>
           </div>
@@ -152,14 +160,14 @@
               <input type="text" class="form-control" id="mydate" name="tgl_diterima" placeholder="Tanggal diterima" value="<?php echo $tgl_diterima; ?>">
             </div>
           </div>
+        </div>
+        <div class="col-md-6">
           <div class="form-group">
             <label class="col-sm-3 control-label">Kelas Diterima</label>
             <div class="col-sm-9">
               <input type="number" class="form-control" name="kelas_diterima" placeholder="Diterima di kelas?" min="1" value="<?php echo $kelas_diterima; ?>">
             </div>
           </div>
-        </div>
-        <div class="col-md-6">
           <div class="form-group">
             <label class="col-sm-3 control-label">Nama Ayah</label>
             <div class="col-sm-9">
@@ -214,20 +222,20 @@
               <input type="text" class="form-control" name="pekerjaan_wali" placeholder="Pekerjaan Wali" value="<?php echo $pekerjaan_wali; ?>">
             </div>
           </div>
-          <div class="form-group">
+          <!-- <div class="form-group">
             <label for="inputPassword3" class="col-sm-3 control-label">Foto</label>
             <div class="col-sm-9">
               <input type="file" name="foto">
             </div>
-          </div>
+          </div> -->
         </div>
         <div class="form-group col-md-12">
         <label class="col-sm-2"></label>
           <div class="col-sm-4">
-            <button type="submit" name="submit" class="btn btn-success" onclick="return konfirmasi_edit();"><i class="fa fa-upload"></i> Kirim</button>
+            <button type="submit" name="submit" class="btn btn-success" onclick="return konfirmasi_edit();"><i class="fa fa-upload"></i> SIMPAN</button>
             <?php 
               $back = isset($_SERVER['HTTP_REFERER']) ? htmlspecialchars($_SERVER['HTTP_REFERER']) : '';
-              echo anchor($back,'<i class="fa fa-share"></i> Kembali',array('class'=>'btn btn-danger'));
+              echo anchor($back,'<i class="fa fa-share"></i> KEMBALI',array('class'=>'btn btn-danger'));
             ?>
           </div>
         </div>
