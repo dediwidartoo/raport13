@@ -77,11 +77,19 @@
               </label>
             </div>
           </div>
-          <div class="form-group">
+          <!-- <div class="form-group">
             <label for="inputPassword3" class="col-sm-3 control-label">Agama</label>
             <div class="col-sm-9">
             <?php 
             echo form_dropdown('agama', array('islam' =>'ISLAM', 'kristen' =>'KRISTEN', 'budha' =>'BUDHA', 'hindu' =>'HINDU', 'katolik' =>'KATOLIK'), null, "class='form-control'");
+            ?>
+            </div>
+          </div> -->
+          <div class="form-group">
+            <label for="inputPassword3" class="col-sm-3 control-label">Agama 2</label>
+            <div class="col-sm-9">
+            <?php 
+            echo cmb_dinamis('agama', 'tbl_agama', 'nama_agama', 'kd_agama');
             ?>
             </div>
           </div>
@@ -193,10 +201,10 @@
         <div class="form-group col-md-12">
         <label class="col-sm-2"></label>
           <div class="col-sm-4">
-            <button type="submit" name="submit" class="btn btn-success" onclick="return konfirmasi_tambah();"><i class="fa fa-upload"></i> Kirim</button>
+            <button type="submit" name="submit" class="btn btn-success btn-xm" onclick="return konfirmasi_tambah();"><i class="fa fa-upload"></i> KIRIM</button>
             <?php 
               $back = isset($_SERVER['HTTP_REFERER']) ? htmlspecialchars($_SERVER['HTTP_REFERER']) : '';
-              echo anchor($back,'<i class="fa fa-share"></i> Kembali',array('class'=>'btn btn-danger'));
+              echo anchor($back,'<i class="fa fa-share"></i> KEMBALI',array('class'=>'btn btn-danger btn-xm'));
             ?>
           </div>
         </div>
