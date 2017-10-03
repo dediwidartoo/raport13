@@ -25,7 +25,8 @@ class Mdl_siswa extends CI_Model
 			'temp_lahir' 		=>$this->input->post('temp_lahir', TRUE),
 			'tgl_lahir' 		=>$this->input->post('tgl_lahir', TRUE),
 			'j_kelamin' 		=>$this->input->post('j_kelamin', TRUE),
-			'agama' 			=>$this->input->post('agama', TRUE),
+			/*'agama' 			=>$this->input->post('agama', TRUE),*/
+			'kd_agama' 			=>$this->input->post('agama', TRUE),
 			'status_keluarga' 	=>$this->input->post('status_keluarga', TRUE),
 			'anak_ke' 			=>$this->input->post('anak_ke', TRUE),
 			'alamat' 			=>$this->input->post('alamat', TRUE),
