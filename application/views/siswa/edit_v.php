@@ -99,12 +99,12 @@
             <label for="inputPassword3" class="col-sm-3 control-label">Jenis Kelamin</label>
             <div class="col-sm-3">
               <label>
-                <input type="radio" name="j_kelamin" value="L" <?php echo ($j_kelamin== 'L') ?  "checked" : "" ; ?> class="flat-red"> Laki-laki
+                <input type="radio" name="j_kelamin" value="L" <?php echo ($j_kelamin=='L') ?  "checked" : "" ; ?> class="flat-red"> Laki-laki
               </label>
             </div>
             <div class="col-sm-3">
               <label>
-                <input type="radio" name="j_kelamin" value="P" <?php echo ($j_kelamin== 'P') ?  "checked" : "" ; ?> class="flat-red"> Perempuan
+                <input type="radio" name="j_kelamin" value="P" <?php echo ($j_kelamin=='P') ?  "checked" : "" ; ?> class="flat-red"> Perempuan
               </label>
             </div>
           </div>

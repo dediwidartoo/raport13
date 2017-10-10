@@ -17,6 +17,20 @@ class Mdl_siswa extends CI_Model
 		return $this->db->get_where($table, $where);
 	}
 
+	function agama_siswa($where,$table)
+	{
+		/*$this->db->select('tbl_agama.nama_agama');
+		$this->db->from('tbl_agama');
+		$this->db->join('tbl_siswa', 'tbl_agama.kd_agama = tbl_siswa.kd_agama');
+		$this->db->query('SELECT tbl_agama.nama_agama FROM tbl_agama JOIN tbl_siswa WHERE tbl_agama.kd_agama = tbl_siswa.kd_agama');
+		$query = $this->db->get();
+		if($query->num_rows() > 0) {
+	        $results = $query->result_array();
+	    }
+	    return $results;*/
+	    return $this->db->get_where($table, $where);
+	}
+
 	function save()
 	{
 		$data = array(

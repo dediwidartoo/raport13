@@ -134,14 +134,14 @@
                         </a>
                         <ul class='treeview-menu'>";
                         foreach ($submenu->result() as $sub) {
-                          echo "<li class='treeview'>".anchor($sub->link, "<i class='".$sub->icon."'></i>".$sub->nama_menu)."</li>";
+                          echo "<li>".anchor($sub->link, "<i class='".$sub->icon."'></i>".$sub->nama_menu)."</li>";
                         }
                   echo "</ul>
                     </li>";
               }
               else {
                 // tampilkan main menu
-                echo "<li class='treeview'>".anchor($main->link, "<i class='".$main->icon."'></i>".$main->nama_menu)."</li>";
+                echo "<li>".anchor($main->link, "<i class='".$main->icon."'></i>".$main->nama_menu)."</li>";
               }
             }
             ?>
