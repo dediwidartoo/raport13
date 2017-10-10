@@ -86,7 +86,7 @@
             </div>
           </div> -->
           <div class="form-group">
-            <label for="inputPassword3" class="col-sm-3 control-label">Agama 2</label>
+            <label for="inputPassword3" class="col-sm-3 control-label">Agama</label>
             <div class="col-sm-9">
             <?php 
             echo cmb_dinamis('agama', 'tbl_agama', 'nama_agama', 'kd_agama');

@@ -35,12 +35,39 @@
 				<?php
 					//$no = 1;
 					foreach ($konten as $k0 => $v0) {
+						/*$id_siswa  	= $v0['id_siswa'];
+						$nis 		= $v0['nis'];
+						$nama   	= $v0['nama_siswa'];
+						$temp_lahir = $v0['temp_lahir'];
+						$tgl_lahir 	= $v0['tgl_lahir'];
+						$j_kelamin	= $v0['j_kelamin'];
+						$agama 		= $v0['agama'];
+						$status_keluarga= $v0['status_keluarga'];
+						$anak_ke 	= $v0['anak_ke'];
+						$alamat 	= $v0['alamat'];
+						$telp 		= $v0['telp'];
+						$asal_sekolah 	= $v0['asal_sekolah'];
+						$kelas_diterima	= $v0['kelas_diterima'];
+						$tgl_diterima 	= $v0['tgl_diterima'];
+						$nama_ayah 	= $v0['nama_ayah'];
+						$nama_ibu 	= $v0['nama_ibu'];
+						$alamat_orangtua= $v0['alamat_orangtua'];
+						$pekerjaan_ayah = $v0['pekerjaan_ayah'];
+						$pekerjaan_ibu 	= $v0['pekerjaan_ibu'];
+						$nama_wali 	= $v0['nama_wali'];
+						$alamat_wali 	= $v0['alamat_wali'];
+						$telp_wali 	= $v0['telp_wali'];
+						$pekerjaan_wali = $v0['pekerjaan_wali'];
+						$foto 		= $v0['foto'];*/
+
 						$id_siswa  		= $v0->id_siswa;
 						$nis 			= $v0->nis;
 						$nama   		= $v0->nama_siswa;
 						$temp_lahir 	= $v0->temp_lahir;
 						$tgl_lahir 		= $v0->tgl_lahir;
 						$j_kelamin		= $v0->j_kelamin;
+						$kd_agama		= $v0->kd_agama;
+						$agama 			= $this->db->query("SELECT `tbl_agama`.`nama_agama` FROM tbl_agama JOIN tbl_siswa WHERE `tbl_agama`.`kd_agama` = `tbl_siswa`.`kd_agama`");
 						$status_keluarga= $v0->status_keluarga;
 						$anak_ke 		= $v0->anak_ke;
 						$alamat 		= $v0->alamat;
@@ -99,17 +126,7 @@
 				<tr>
 					<td>j_kelamin</td>
 					<td>:</td>
-					<td>
-						<?php
-						if ($j_kelamin=='L') {
-							echo "Laki-laki";
-						}
-						else {
-							echo "Perempuan";
-						}
-						?>
-							
-					</td>
+					<td><?php echo $j_kelamin; ?></td>
 					<td>nama_ibu</td>
 					<td>:</td>
 					<td><?php echo $nama_ibu; ?></td>
@@ -117,14 +134,7 @@
 				<tr>
 					<td>agama</td>
 					<td>:</td>
-					<td>
-						<?php
-						foreach ($agamaku as $k0 => $v0) {
-							$nama_agama		= $v0->nama_agama;
-							echo $nama_agama;
-						}
-						?>
-					</td>
+					<td><?php echo $kd_agama; ?></td>
 					<td>alamat_orangtua</td>
 					<td>:</td>
 					<td><?php echo $alamat_orangtua; ?></td>
