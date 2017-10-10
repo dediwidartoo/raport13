@@ -84,6 +84,7 @@ class Siswa extends CI_Controller
 	{
 		$where			= array('id_siswa' => $id_siswa);
 		$data['konten']	= $this->Mdl_siswa->daftar_siswa($where, 'tbl_siswa')->result();
+        $data['agamaku']= $this->Mdl_siswa->agama_siswa($where, 'agama')->result();
 		$this->template->load('template', 'siswa/detail_v', $data);
 	}
 
